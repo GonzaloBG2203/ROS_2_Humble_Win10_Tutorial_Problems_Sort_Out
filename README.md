@@ -68,13 +68,14 @@ Traceback (most recent call last):
     extension = command_extensions[name]
 KeyError: 'record'
 
-#SOLUTION:(this one was hard to get, based on https://docs.ros.org/en/rolling/How-To-Guides/Installation-Troubleshooting.html)
-+1.Download Dependencies: https://github.com/lucasg/Dependencies/releases/download/v1.11.1/Dependencies_x64_Release.zip
-+2.Unzip and run DependenciesGui (double click).
-+3.Drag to the new window that opens from DependenciesGui C:\dev\ros2_humble\Lib\site-packages\rosbag2_py\_reader.cp38-win_amd64  (Python Extension Module).
-+4.Find in the left list  the .dll that is missing. (In my case, tinyxml2.dll).
-+5.Use the Windows search utility to find the missing .dll (In my case, it was in C:\ProgramData\chocolatey\lib\tinyxml2\lib\).
-+6.Copy the missing .dll and paste it in the folder where _reader.cp38-win_amd64 is (In my case C:\dev\ros2_humble\Lib\site-packages\rosbag2_py\
+  #**SOLUTION**:(this one was hard to get, based on https://docs.ros.org/en/rolling/How-To-Guides/Installation-Troubleshooting.html)
+
+ 1. Download Dependencies: https://github.com/lucasg/Dependencies/releases/download/v1.11.1/Dependencies_x64_Release.zip
+ 2. Unzip and run DependenciesGui (double click).
+ 3. Drag to the new window that opens from DependenciesGui C:\dev\ros2_humble\Lib\site-packages\rosbag2_py\_reader.cp38-win_amd64  (Python Extension Module).
+ 4. Find in the left list  the .dll that is missing. (In my case, tinyxml2.dll).
+ 5. Use the Windows search utility to find the missing .dll (In my case, it was in C:\ProgramData\chocolatey\lib\tinyxml2\lib\).
+ 6. Copy the missing .dll and paste it in the folder where _reader.cp38-win_amd64 is (In my case C:\dev\ros2_humble\Lib\site-packages\rosbag2_py\
 
 - ADD SOME SOURCES (using colcom to build packages)
 Command “git clone https://github.com/ros2/examples src/examples -b humble” returns error: 
@@ -89,5 +90,6 @@ operable program or batch file.”
             + README.md
 
 #Build the workspace
-EXECUTING THIS COMMAND “colcon build --symlink-install --merge-install” GIVES A BUNCH OF ERRORS, THE LAST ONE BEING “VisualStudioVersion is not set, please run within a Visual Studio Command Prompt” INSTALL VISUAL STUDIO CODE (I HAD VISUAL STUDIO "SIMPLE VERSION", I COULDN´T START A COMMAND PROMPT FROM THE SOFTWARTE).
+
+**EXECUTING THIS COMMAND** “colcon build --symlink-install --merge-install” **GIVES A BUNCH OF ERRORS, THE LAST ONE BEING:** “VisualStudioVersion is not set, please run within a Visual Studio Command Prompt”. **INSTALL ***VISUAL STUDIO CODE***, IT HAS A VISUAL STUDIO COMMAND PROMPT INCLUDED (I HAD VISUAL STUDIO "SIMPLE VERSION", I COULDN´T START A COMMAND PROMPT FROM THE SOFTWARTE).**
 
