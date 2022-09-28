@@ -45,9 +45,9 @@ Keep an eye on the turtlesim window, and enter the following command into your t
 
 Tasks
 
-    Running a Launch File
+ Running a Launch File
 
-    Open a new terminal and run:
+  Open a new terminal and run:
 
         ros2 launch turtlesim multisim.launch.py
 
@@ -79,14 +79,14 @@ Run the command:
     extension = command_extensions[name]
 - KeyError: 'record'
 
-  **SOLUTION**:(this one was hard to get, based on https://docs.ros.org/en/rolling/How-To-Guides/Installation-Troubleshooting.html)
+  **SOLUTION:(this one was hard to get, based on https://docs.ros.org/en/rolling/How-To-Guides/Installation-Troubleshooting.html)
 
  1. Download Dependencies: https://github.com/lucasg/Dependencies/releases/download/v1.11.1/Dependencies_x64_Release.zip
  2. Unzip and run DependenciesGui (double click).
  3. Drag to the new window that opens from DependenciesGui C:\dev\ros2_humble\Lib\site-packages\rosbag2_py\_reader.cp38-win_amd64  (Python Extension Module).
  4. Find in the left list  the .dll that is missing. (In my case, tinyxml2.dll).
  5. Use the Windows search utility to find the missing .dll (In my case, it was in C:\ProgramData\chocolatey\lib\tinyxml2\lib\).
- 6. Copy the missing .dll and paste it in the folder where _reader.cp38-win_amd64 is (In my case C:\dev\ros2_humble\Lib\site-packages\rosbag2_py\
+ 6. Copy the missing .dll and paste it in the folder where _reader.cp38-win_amd64 is (In my case C:\dev\ros2_humble\Lib\site-packages\rosbag2_py\**
 
 - ADD SOME SOURCES (using colcom to build packages)
 Command “git clone https://github.com/ros2/examples src/examples -b humble” returns error: 
