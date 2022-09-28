@@ -43,19 +43,20 @@ Keep an eye on the turtlesim window, and enter the following command into your t
 
     ros2 action send_goal /turtle1/rotate_absolute turtlesim/action/RotateAbsolute "{theta: 1.57}"
 
-Tasks
-Running a Launch File
-Open a new terminal and run:
+Tasks
 
-    ros2 launch turtlesim multisim.launch.py
+    Running a Launch File
+
+    Open a new terminal and run:
+
+        ros2 launch turtlesim multisim.launch.py
 
   ERROR: Failed to load entry point 'launch': No module named 'lark'...**EXECUTE: "PIP3 INSTALL LARK" IN YOUR TERMINAL. FOR OTHER ERRORS LIKE THIS (NO MODULE NAMED "...", USE THE COMMAND: "PIP3 INSTALL ...", AS A WAY TO INSTALL MISSING PYTHON MODULES.**
 
-Recording and playing back data 3 ros2 bag record
+Recording and playing back data 3 ros2 bag record:
 To record the data published to a topic use the command syntax:
 
-    
-  ros2 bag record <topic_name>
+        ros2 bag record <topic_name>
 
 Before running this command on your chosen topic, open a new terminal and move into the bag_files directory you created earlier, because the rosbag file will save in the directory where you run it.
 
@@ -63,22 +64,22 @@ Run the command:
 
     ros2 bag record /turtle1/cmd_vel
 
-ERROR! 
-Failed to load entry point 'record': DLL load failed while importing _reader: The specified module could not be found.
-Traceback (most recent call last):
-  File "C:\dev\ros2_humble\Scripts\ros2-script.py", line 33, in <module>
+**ERROR!** 
+- Failed to load entry point 'record': DLL load failed while importing _reader: The specified module could not be found.
+    - Traceback (most recent call last):
+  - File "C:\dev\ros2_humble\Scripts\ros2-script.py", line 33, in <module>
     sys.exit(load_entry_point('ros2cli==0.18.3', 'console_scripts', 'ros2')())
-  File "C:\dev\ros2_humble\Lib\site-packages\ros2cli\cli.py", line 50, in main
+  - File "C:\dev\ros2_humble\Lib\site-packages\ros2cli\cli.py", line 50, in main
     add_subparsers_on_demand(
-  File "C:\dev\ros2_humble\Lib\site-packages\ros2cli\command\__init__.py", line 250, in add_subparsers_on_demand
+  - File "C:\dev\ros2_humble\Lib\site-packages\ros2cli\command\__init__.py", line 250, in add_subparsers_on_demand
     extension.add_arguments(
-  File "C:\dev\ros2_humble\Lib\site-packages\ros2bag\command\bag.py", line 26, in add_arguments
+  - File "C:\dev\ros2_humble\Lib\site-packages\ros2bag\command\bag.py", line 26, in add_arguments
     add_subparsers_on_demand(
-  File "C:\dev\ros2_humble\Lib\site-packages\ros2cli\command\__init__.py", line 237, in add_subparsers_on_demand
+  - File "C:\dev\ros2_humble\Lib\site-packages\ros2cli\command\__init__.py", line 237, in add_subparsers_on_demand
     extension = command_extensions[name]
-KeyError: 'record'
+- KeyError: 'record'
 
-  #**SOLUTION**:(this one was hard to get, based on https://docs.ros.org/en/rolling/How-To-Guides/Installation-Troubleshooting.html)
+  **SOLUTION**:(this one was hard to get, based on https://docs.ros.org/en/rolling/How-To-Guides/Installation-Troubleshooting.html)
 
  1. Download Dependencies: https://github.com/lucasg/Dependencies/releases/download/v1.11.1/Dependencies_x64_Release.zip
  2. Unzip and run DependenciesGui (double click).
