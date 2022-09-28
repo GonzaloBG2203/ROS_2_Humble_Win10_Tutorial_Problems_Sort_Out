@@ -105,5 +105,5 @@ Run the command:
 
 ## Build the workspace:
 
-**EXECUTING THIS COMMAND** “colcon build --symlink-install --merge-install” **GIVES A BUNCH OF ERRORS, THE LAST ONE BEING:** “VisualStudioVersion is not set, please run within a Visual Studio Command Prompt”. **INSTALL ***VISUAL STUDIO CODE***, IT HAS A VISUAL STUDIO COMMAND PROMPT INCLUDED (I HAD VISUAL STUDIO "SIMPLE VERSION", I COULDN´T START A COMMAND PROMPT FROM THE SOFTWARTE).**
+**EXECUTING THIS COMMAND** “colcon build --symlink-install --merge-install” **GIVES A BUNCH OF ERRORS, THE LAST ONE BEING:** “VisualStudioVersion is not set, please run within a Visual Studio Command Prompt”. **INSTALL ***VISUAL STUDIO CODE***, IT HAS A VISUAL STUDIO COMMAND PROMPT INCLUDED (I HAD VISUAL STUDIO "SIMPLE VERSION", I COULDN´T START A COMMAND PROMPT FROM THE SOFTWARE).**
 
